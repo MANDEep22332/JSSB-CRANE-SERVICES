@@ -44,3 +44,7 @@
 .bg-dark {
   background-color: #1a2634 !important; /* Match your Navy theme */
 }
+
+.highlight-border {
+  border: 2px solid #f39c12 !important;
+}

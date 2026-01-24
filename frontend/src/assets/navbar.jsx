@@ -29,60 +29,50 @@ function NavBar() {
           </button>
 
           <div className="collapse navbar-collapse" id="navbarNav">
-            {/* Search Bar */}
-            <form
-              className="d-flex mx-lg-auto my-2 my-lg-0"
-              role="search"
-              style={{ maxWidth: "250px", width: "100%" }}
-            >
-              <input
-                className="form-control form-control-sm me-2"
-                type="search"
-                placeholder="Search parts..."
-                aria-label="Search"
-              />
+  {/* Search Bar: Wrapped in a div with vertical margin for mobile spacing */}
+  <div className="mx-lg-auto my-3 my-lg-0" style={{ maxWidth: "300px", width: "100%" }}>
+    <form className="d-flex" role="search">
+      <div className="input-group input-group-sm">
+        <input
+          className="form-control border-secondary text-white"
+          type="search"
+          placeholder="Search parts..."
+          style={{ backgroundColor: "#2c3e50" }}
+        />
+        <button className="btn btn-warning" type="submit">
+          <Search size={16} className="text-dark" />
+        </button>
+      </div>
+    </form>
+  </div>
 
-              <button className="btn btn-warning" type="submit">
-                <Search size={16} className="text-dark" />
-              </button>
-            </form>
+  <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+    {/* ... your existing links ... */}
+    <li className="nav-item">
+      <Link className="nav-link py-2" to="/">Home</Link>
+    </li>
+    <li className="nav-item">
+      <Link className="nav-link py-2" to="/services">Services</Link>
+    </li>
+    <li className="nav-item">
+      <Link className="nav-link py-2" to="/parts">Parts Inventory</Link>
+    </li>
+    <li className="nav-item">
+      <Link className="nav-link py-2 me-lg-3" to="/contact">Contact</Link>
+    </li>
 
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-              <li className="nav-item">
-                <Link className="nav-link" to="/">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/services">
-                  Services
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/parts">
-                  Parts Inventory
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link me-lg-3" to="/contact">
-                  Contact
-                </Link>
-              </li>
-
-              {/* 2. WhatsApp Button in Navbar */}
-              <li className="nav-item mt-2 mt-lg-0">
-                <a
-                  href={`https://wa.me/${whatsappNumber}?text=Hello Jai Shree Shyam Cranes, I have a requirement.`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="whatsapp-nav-btn d-flex align-items-center gap-2"
-                >
-                  <MessageCircle size={20} />
-                  <span className="fw-bold">WhatsApp</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+    {/* WhatsApp Button */}
+    <li className="nav-item mt-3 mt-lg-0">
+      <a
+        href={`https://wa.me/${whatsappNumber}`}
+        className="whatsapp-nav-btn d-flex align-items-center justify-content-center gap-2"
+      >
+        <MessageCircle size={20} />
+        <span className="fw-bold">WhatsApp</span>
+      </a>
+    </li>
+  </ul>
+</div>
         </div>
       </nav>
     </>
