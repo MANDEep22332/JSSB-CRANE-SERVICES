@@ -31,9 +31,7 @@
 
 
 /* Add this to highlight the Rental card specifically */
-.service-card:contains("Rent") {
-  border: 2px solid #f39c12;
-}
+
 
 /* Badge styling */
 .badge {

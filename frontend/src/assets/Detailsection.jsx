@@ -36,7 +36,7 @@ function Services() {
         <h2 className="text-center mb-5 fw-bold">OUR SERVICES</h2>
         <div className="row g-4">
           {services.map((service, index) => (
-            <div className="col-md-4" key={index}>
+            <div className={`service-card ${service.title.includes("Rent") ? "highlight-border" : ""}`} key={index}>
               <div className="card h-100 service-card border-0 shadow-sm">
                 <div className="card-body text-center p-4">
                   <div className="service-icon mb-3">{service.icon}</div>
