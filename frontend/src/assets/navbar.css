@@ -1,0 +1,78 @@
+.navbar{
+    height: 100px;
+}
+.Logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    
+}
+
+
+/* Custom Navbar Styling */
+.navbar {
+  background-color: #1a2634 !important; /* Deep Navy from the design */
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #2d3e50;
+}
+
+.navbar-brand img {
+  filter: brightness(0) invert(1); /* Makes the logo white if it's dark */
+}
+
+.nav-link {
+  color: #ffffff !important;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #3498db !important; /* Industrial Blue highlight */
+}
+
+/* Customizing the Search Bar */
+.form-control {
+  background-color: #2d3e50;
+  border: none;
+  color: white;
+}
+
+.form-control::placeholder {
+  color: #bdc3c7;
+}
+
+.btn-outline-success {
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.btn-outline-success:hover {
+  background-color: #3498db;
+  border-color: #3498db;
+  color: white;
+}
+
+.whatsapp-nav-btn {
+  background-color: #25D366; /* Official WhatsApp Green */
+  color: white;
+  padding: 6px 15px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.whatsapp-nav-btn:hover {
+  background-color: #128C7E;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+}
+
+/* Ensure navbar stays on top while scrolling */
+.sticky-top {
+  z-index: 1020;
+}

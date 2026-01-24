@@ -1,0 +1,25 @@
+.services-header {
+  background: linear-gradient(rgba(26, 38, 52, 0.9), rgba(26, 38, 52, 0.8)), 
+              url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1600');
+  height: 35vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.service-detail-card {
+  background-color: #fdfdfd;
+  border-bottom: 4px solid #f39c12 !important; /* Industrial Orange highlight */
+  transition: transform 0.3s ease;
+}
+
+.service-detail-card:hover {
+  transform: translateY(-5px);
+}
+
+.text-primary {
+  color: #1a2634 !important; /* Your Navy theme */
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}

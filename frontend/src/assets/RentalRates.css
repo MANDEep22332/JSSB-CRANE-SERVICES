@@ -1,0 +1,22 @@
+.rental-page {
+    background-color: #ffffff;
+    min-height: 80vh;
+}
+
+.table thead {
+    background-color: #1a2634;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #fff9f0; /* Light orange tint on hover */
+}
+
+.text-primary {
+    color: #1a2634 !important;
+}
+
+@media (max-width: 768px) {
+    .rental-page h2 {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,48 @@
+.detail{
+    width: 100%;
+    margin: 0px;
+    background-color: green;
+    border: 2px solid orange;
+    height: 400px;
+}
+
+.services-section {
+  background-color: #f8f9fa; /* Light grey to contrast with the dark hero */
+}
+
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.service-icon {
+  font-size: 3rem;
+}
+
+.btn-link {
+  color: #3498db;
+  font-weight: 600;
+}
+
+
+/* Add this to highlight the Rental card specifically */
+.service-card:contains("Rent") {
+  border: 2px solid #f39c12;
+}
+
+/* Badge styling */
+.badge {
+  padding: 8px 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.bg-dark {
+  background-color: #1a2634 !important; /* Match your Navy theme */
+}

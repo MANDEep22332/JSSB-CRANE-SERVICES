@@ -1,0 +1,18 @@
+.part-card {
+  transition: transform 0.2s ease;
+  background: #fff;
+}
+
+.part-card:hover {
+  transform: scale(1.03);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #f39c12;
+  box-shadow: 0 0 0 0.25rem rgba(243, 156, 18, 0.25);
+}
+
+.badge {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
