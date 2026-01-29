@@ -1,0 +1,43 @@
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: white;
+  padding: 20px 0;
+}
+
+.logo-slide-track {
+  display: flex;
+  width: calc(250px * 16); /* Adjusted for 8 brands x 2 */
+  animation: scroll 40s linear infinite;
+}
+
+.slide {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-box {
+  padding: 15px 30px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #f9f9f9;
+  font-weight: 800;
+  color: #333;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.brand-box:hover {
+  border-color: #f39c12;
+  color: #f39c12;
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-250px * 8)); } /* Move by half the track width */
+}

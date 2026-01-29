@@ -5,7 +5,11 @@ import "./Footer.css";
 
 function Footer() {
   const whatsappNumber = "918053966706";
+ // 1. FOR THE BUTTON (Direct link to your business)
+const navigationUrl = "https://www.google.com/maps/dir//Jai+Shree+Shyam+Bhavishya+Crane+parts+%26+services+QQPP%2BX2R+Sampla,+Gijhi,+Haryana+124501/@28.7770932,76.7725838,17z/";
 
+// 2. FOR THE IFRAME (The official embed format)
+const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3493.643794326573!2d76.7700088755026!3d28.7770979755866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d9f00058a6007%3A0xd6b65e51f061a4f2!2sJai%20Shree%20Shyam%20Bhavishya%20Crane%20parts%20%26%20services!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin";
   return (
     <footer className="footer-section">
       <div className="container">
@@ -106,22 +110,23 @@ function Footer() {
               </p>
 
               {/* Google Maps Embed */}
-              <div
-                className="footer-map rounded overflow-hidden shadow-sm"
-                style={{ height: "150px" }}
-              >
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13968.618635811463!2d76.7645107!3d28.818815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d7966370498db%3A0x60037146522f7b8c!2sSampla%2C%20Haryana%20124501!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                  width="100%"
-                  height="100%"
-                  style={{
-                    border: 0,
-                    filter: "grayscale(100%) invert(90%) contrast(90%)",
-                  }}
-                  allowFullScreen=""
-                  loading="lazy"
-                ></iframe>
-              </div>
+             <div className="col-lg-6 mb-4">
+            <h5 className="mb-3">Find Our Workshop</h5>
+            <div className="rounded overflow-hidden shadow-sm" style={{ height: "200px", border: "1px solid #444" }}>
+              <iframe
+                src={mapEmbedUrl}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                title="Footer Office Map"
+              ></iframe>
+            </div>
+            <a href={navigationUrl} target="_blank" rel="noreferrer" className="btn btn-sm btn-outline-warning mt-2 w-100">
+              Get Directions
+            </a>
+          </div>
               {/* Add this inside your contact-info div, right under the footer-map div */}
               <div className="mt-3">
                 <a

@@ -10,15 +10,21 @@ import FeaturedParts from "./assets/FeaturedParts";
  import ContactPage from "./assets/ContactPage";
  import RentalRates from "./assets/RentalRates";
  import ScrollToTop from "./assets/ScrollToTop";
+ import StatsCounter from "./assets/StatsCounter";
+ import BrandSlider from "./assets/BrandSlider";
+ import QuickContact from "./assets/QuickContact";
 import "./App.css";
 
 // This represents your current landing page
 const Home = () => (
   <>
     <HeroSection />
+    <StatsCounter />
     <Services />
     <FeaturedParts />
+    <BrandSlider />
     <VideoSection />
+    
   </>
 );
 
@@ -27,6 +33,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <NavBar />
+      <QuickContact/>
       <Routes>
         {/* Main Home Page */}
         <Route path="/" element={<Home />} />

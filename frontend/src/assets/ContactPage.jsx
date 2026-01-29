@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import OfficeMap from './OfficeMap';
 import './ContactPage.css';
 
 function ContactPage() {
@@ -52,6 +53,7 @@ function ContactPage() {
       <div className="row justify-content-center">
         <div className="col-md-6">
           <h2 className="text-white mb-4 text-center fw-bold">Send an Inquiry</h2>
+          <OfficeMap/>
           <form className="bg-dark p-4 rounded shadow border border-secondary" onSubmit={handleWhatsAppSend}>
             
             <div className="mb-3">
@@ -83,6 +85,7 @@ function ContactPage() {
             <button className="btn btn-warning w-100 fw-bold py-2" type="submit">
               🚀 Send via WhatsApp
             </button>
+            
           </form>
         </div>
       </div>
