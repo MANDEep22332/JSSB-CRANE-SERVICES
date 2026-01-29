@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Services.css";
 
 const services = [
@@ -36,15 +37,21 @@ function Services() {
         <h2 className="text-center mb-5 fw-bold">OUR SERVICES</h2>
         <div className="row g-4">
           {services.map((service, index) => (
-            <div className={`service-card ${service.title.includes("Rent") ? "highlight-border" : ""}`} key={index}>
+            <div
+              className={`service-card ${service.title.includes("Rent") ? "highlight-border" : ""}`}
+              key={index}
+            >
               <div className="card h-100 service-card border-0 shadow-sm">
                 <div className="card-body text-center p-4">
                   <div className="service-icon mb-3">{service.icon}</div>
                   <h4 className="card-title fw-bold">{service.title}</h4>
                   <p className="card-text text-muted">{service.desc}</p>
-                  <button className="btn btn-link text-decoration-none p-0">
+                  <Link
+                    to={`/contact?service=${encodeURIComponent(service.title)}`}
+                    className="btn btn-link text-warning text-decoration-none fw-bold p-0"
+                  >
                     Learn More →
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

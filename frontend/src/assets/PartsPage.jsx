@@ -12,12 +12,12 @@ function PartsPage() {
       image: "https://via.placeholder.com/150",
     },
   ]);
-
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
   useEffect(() => {
     const fetchParts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/parts');
+        const response = await axios.get(`${API_URL}/api/parts`);
         setParts(response.data); // Update state with DB data
       } catch (error) {
         console.error("Error fetching parts from MongoDB:", error);
@@ -38,7 +38,7 @@ function PartsPage() {
   };
 
   try {
-    const response = await axios.post('http://localhost:5000/api/parts', partData);
+    const response = await axios.post(`${API_URL}/api/parts`, partData);
     setParts([response.data, ...parts]); // Add to screen immediately
     alert("Saved to MongoDB!");
   } catch (error) {
@@ -168,7 +168,7 @@ function PartsPage() {
       {/* Display Parts Gallery */}
       <div className="row g-4">
         {parts.map((part) => (
-          <div className="col-md-3" key={part._id || part.id || Math.random()}>
+          <div className="col-md-3" key={part._id || part.id}>
             <div className="card h-100 part-card border-0 shadow-sm">
            <img
   // 1. Try the DB image. 

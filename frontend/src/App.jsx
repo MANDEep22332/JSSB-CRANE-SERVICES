@@ -9,6 +9,7 @@ import PartsPage from "./assets/PartsPage";
 import FeaturedParts from "./assets/FeaturedParts";
  import ContactPage from "./assets/ContactPage";
  import RentalRates from "./assets/RentalRates";
+ import ScrollToTop from "./assets/ScrollToTop";
 import "./App.css";
 
 // This represents your current landing page
@@ -24,6 +25,7 @@ const Home = () => (
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <NavBar />
       <Routes>
         {/* Main Home Page */}

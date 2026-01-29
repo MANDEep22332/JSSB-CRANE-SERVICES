@@ -74,7 +74,8 @@
 
 /* Ensure navbar stays on top while scrolling */
 .sticky-top {
-  z-index: 1020;
+ z-index: 1050; /* Ensures the nav stays on top of images/text */
+  position: relative;
 }
 
 
@@ -113,4 +114,28 @@
   background-color: #128C7E;
   color: white;
   transform: translateY(-2px);
+}
+
+/* Only applies to mobile view (below large screens) */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: white !important;
+    padding: 1rem;
+    border-radius: 8px; /* Optional: gives it a cleaner look */
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  /* Change link colors to dark so they are visible on the white background */
+  .navbar-collapse .nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee; /* Adds separation between links */
+  }
+  
+  /* Remove the bottom border from the last link */
+  .navbar-collapse .nav-link:last-child {
+    border-bottom: none;
+  }
 }

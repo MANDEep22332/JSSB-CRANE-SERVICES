@@ -30,7 +30,7 @@ function NavBar() {
 
           <div className="collapse navbar-collapse" id="navbarNav">
   {/* Search Bar: Wrapped in a div with vertical margin for mobile spacing */}
-  <div className="mx-lg-auto my-3 my-lg-0" style={{ maxWidth: "300px", width: "100%" }}>
+  <div className="mx-lg-auto my-3 my-lg-0 flex-column " style={{ maxWidth: "450px", width: "100%" }}>
     <form className="d-flex" role="search">
       <div className="input-group input-group-sm">
         <input
