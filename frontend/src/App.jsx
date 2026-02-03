@@ -13,6 +13,8 @@ import FeaturedParts from "./assets/FeaturedParts";
  import StatsCounter from "./assets/StatsCounter";
  import BrandSlider from "./assets/BrandSlider";
  import QuickContact from "./assets/QuickContact";
+ import NotFound from "./assets/NotFound";
+ import LoginPage from "./assets/Login";
 import "./App.css";
 
 // This represents your current landing page
@@ -29,9 +31,16 @@ const Home = () => (
 );
 
 function App() {
+
+    const EmergencyBar = () => (
+  <div className="bg-danger text-white text-center py-2 fw-bold small">
+    🚀 24/7 EMERGENCY REPAIR & TOWING ACROSS HARYANA: +91 8053966706
+  </div>
+);
   return (
     <Router>
       <ScrollToTop />
+      <EmergencyBar/>
       <NavBar />
       <QuickContact/>
       <Routes>
@@ -43,6 +52,8 @@ function App() {
         <Route path="/parts" element={<PartsPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/rental-rates" element={<RentalRates />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <FooterSection />
     </Router>
